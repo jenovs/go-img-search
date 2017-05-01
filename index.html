@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search</title>
+  <style>
+    form {
+      line-height: 2rem;
+    }
+    input {
+      font-size: 1.2rem;
+    }
+    button {
+      align-self: flex-end;
+    }
+    .container {
+      margin: auto;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Image search API</h2>
+    <fieldset>
+      <legend>Search Image</legend>
+      <form action="/search/" method="GET">
+        <label for="q">Search:</label>
+        <input type="text" name="q" placeholder="" required>
+        <br/>
+        <label for="offset">Offset:&nbsp;&nbsp;</label>
+        <input type="number" name="offset" value="1">
+        <br/>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </fieldset>
+    <div style="margin: 1rem 0;">
+      <a href="/latest/">Show latest searches</a>
+    </div>
+  </div>
+</body>
+</html>
