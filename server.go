@@ -18,6 +18,7 @@ func getPort() string {
 func homeHandler(w http.ResponseWriter, r *http.Request) {
 	os.Setenv("TEST", "this is a test")
 	fmt.Println(os.Getenv("TEST"))
+	fmt.Println(os.Getenv("TEST2"))
 }
 
 func faviconHandler(w http.ResponseWriter, r *http.Request) {
