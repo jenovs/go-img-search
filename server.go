@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	_ "github.com/jenovs/api-image-search/config"
 	"log"
 	"net/http"
 	"os"
@@ -16,9 +17,9 @@ func getPort() string {
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	os.Setenv("TEST", "this is a test")
-	fmt.Println(os.Getenv("TEST"))
-	fmt.Println(os.Getenv("TEST2"))
+	fmt.Println("Env variables:")
+	fmt.Println(os.Getenv("API_KEY"))
+	fmt.Println(os.Getenv("SE_ID"))
 }
 
 func faviconHandler(w http.ResponseWriter, r *http.Request) {
